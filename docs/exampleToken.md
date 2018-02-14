@@ -18,6 +18,14 @@ This standard is in draft status, this means, it is still subject to changes.
 
 [ERC223](https://github.com/ethereum/EIPs/issues/223)
 
+### HumanToken
+
+This standard allows contracts to handle incoming token transfers through approveAndCall function.
+
+This standard is in draft status, this means, it is still subject to changes.
+
+[HumanToken](https://github.com/ConsenSys/Tokens/tree/approveAndCall)
+
 ### Mintable
 
 This contract allows increasing EXM supply by the owner (the sale contract). This feature is permanently disabled once the sale ends.
@@ -26,9 +34,9 @@ We used Open Zeppelin MintableToken.sol contract, you can find it [here](https:/
 
 ## Functions
 
-Dether token inherits from the following contracts: DetailedERC20 and MintableToken.
+Example token inherits from the following contracts: DetailedERC20, MintableToken, ERC223BasicToken and HumanStandardToken.
 
-You can find EXM contract [here](https://github.com/tokenfoundry/dether-sale/blob/develop/contracts/DetherToken.sol)
+You can find EXM contract [here](https://github.com/tokenfoundry/token-contracts/blob/master/contracts/token/ExampleToken.sol)
 
 ### modifier onlyOwner()
 
@@ -75,6 +83,12 @@ Transfers the specified amount of tokens from sender's account to the specified 
 ### approve(address _spender, uint256 _value) public returns (bool)
 
 Sets the amount of the sender's token balance that the given address is approved to use.
+
+---
+
+### approveAndCall(address _spender, uint256 _value, bytes _extraData) public returns (bool success)
+
+Notify a contract if an approval() has occurred.
 
 ---
 
