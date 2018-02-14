@@ -22,7 +22,7 @@ contract Lockable is Ownable {
     /**
     * @dev called by the owner to release, returns to normal state
     */
-    function Release() onlyOwner {
+    function Release() public onlyOwner {
       locked = false;
       UnLock();
     }

@@ -3,8 +3,8 @@ pragma solidity 0.4.18;
 import "zeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
 import "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
 
-import './ERC223BasicToken.sol';
-import './HumanStandardToken.sol';
+import './token/ERC223BasicToken.sol';
+import './token/HumanStandardToken.sol';
 
 
 /// @title ExampleToken that uses MintableToken, DetailedERC20, ERC223BasicToken and HumanStandardToken.

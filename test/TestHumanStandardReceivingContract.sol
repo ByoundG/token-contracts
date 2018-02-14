@@ -1,7 +1,7 @@
 pragma solidity 0.4.18;
 
 import "truffle/Assert.sol";
-import "../contracts/token/ExampleToken.sol";
+import "../contracts/ExampleToken.sol";
 import "./mocks/HumanStandardReceivingContractMock.sol";
 
 contract TestHumanStandardReceivingContract {
