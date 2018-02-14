@@ -1,11 +1,8 @@
-# sale-contracts
+# token-contracts
 
-Code for the new token foundry token and sale base contracts.
+Code for the new token foundry implementation .
 
 ## Contracts
-
-- [Sale.sol](/contracts/Sale.sol): Abstract base contract from which all sales inherit. It implements a basic sale structure and common functions.
-- [DisbursementHandler.sol](/contracts/DisbursementHandler.sol): Contract that is used by the sale in order to lock tokens until a timestamp.
 
 ## Instructions
 
