@@ -10,6 +10,8 @@ Machine-based, rapid creation of many tokens would not necessarily need these ex
 2) In the absence of a token registry: Optional Decimal, Symbol & Name.
 3) Optional approveAndCall() functionality to notify a contract if an approval() has occurred.
 
+using https://github.com/ConsenSys/Tokens/tree/approveAndCall base for this impelentation.
+
 .*/
 
 import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
