@@ -94,4 +94,16 @@ contract('Token', (accounts) => {
     let ownerBalance = await token.balanceOf.call(owner);
     assert.equal(ownerBalance.valueOf(), 980, "should be 980");
   });
+
+  it('should not allow tranfer eth directly to the token contract', async () => {
+    try {
+      await expectThrow(web3.eth.sendTransaction({from: accounts[0], to: token.address, value: 10}));
+    } catch (error) {
+      const revert = error.message.search('revert') >= 0;
+      assert.equal(revert, true, "should be true");
+      return;
+    }
+  });
+
+
 });
