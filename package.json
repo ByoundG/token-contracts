@@ -1,8 +1,8 @@
 {
-  "name": "@tokenfoundry/sale-contracts",
-  "version": "0.1.2",
-  "description": "Code for the new token foundry token and sale base contracts.",
-  "repository": "https://github.com/tokenfoundry/sale-contracts.git",
+  "name": "@tokenfoundry/token-contracts",
+  "version": "0.0.1",
+  "description": "Code for the new token foundry token using zeppeling ERC20 implementation.",
+  "repository": "https://github.com/tokenfoundry/token-contracts.git",
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
@@ -14,7 +14,6 @@
     "test": "test"
   },
   "dependencies": {
-    "@tokenfoundry/state-machine": "^0.1.0",
     "zeppelin-solidity": "^1.6.0"
   },
   "devDependencies": {
