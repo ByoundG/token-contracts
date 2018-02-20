@@ -33,7 +33,7 @@ contract('Locked Token', (accounts) => {
 
   it('should unlock transfer function', async () => {
 
-    await token.Release();
+    await token.release();
 
     let locked = await token.locked.call();
     assert.equal(locked, false, 'should be true');
