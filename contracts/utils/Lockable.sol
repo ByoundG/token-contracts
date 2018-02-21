@@ -15,16 +15,15 @@ contract Lockable is Ownable {
     * @dev Modifier to make a function callable only when the contract is not locked.
     */
     modifier whenNotLocked() {
-      require(!locked);
-      _;
+        require(!locked);
+        _;
     }
 
     /**
     * @dev called by the owner to release, returns to normal state
     */
     function release() public onlyOwner {
-      locked = false;
-      UnLock();
+        locked = false;
+        UnLock();
     }
-
 }

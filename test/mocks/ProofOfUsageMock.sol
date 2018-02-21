@@ -13,10 +13,9 @@ contract ProofOfUsageMock is ProofOfUsage {
     // just store sender and function signature to compare it
     function testProofOfUsage() 
         public
-        used
+        used(msg.sender)
     {
-      sender = msg.sender;
-      funct = msg.sig;
+        sender = msg.sender;
+        funct = msg.sig;
     }
-
 }

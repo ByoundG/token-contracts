@@ -18,11 +18,10 @@ contract HumanStandardReceivingContractMock {
     /// @param _tokenContract Token address.
     /// @param _extraData  Transaction metadata.
     function receiveApproval(address _from, uint256 _value, address _tokenContract, bytes _extraData) public {
-      from = _from;
-      value = _value;
-      tokenContract = _tokenContract;
-      extraData = _extraData;
-      ReceivedApproval(_value);
+        from = _from;
+        value = _value;
+        tokenContract = _tokenContract;
+        extraData = _extraData;
+        ReceivedApproval(_value);
     }
-
 }

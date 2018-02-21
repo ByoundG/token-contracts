@@ -7,7 +7,6 @@ import "zeppelin-solidity/contracts/token/ERC20/ERC20Basic.sol";
  */
 
 contract ERC223Basic is ERC20Basic {
-
     /**
       * @dev Transfer the specified amount of tokens to the specified address.
       *      Now with a new parameter _data.

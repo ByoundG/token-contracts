@@ -4,17 +4,16 @@ import "truffle/Assert.sol";
 import "./mocks/ProofOfUsageMock.sol";
 
 contract TestProofOfUsageContract {
-  ProofOfUsageMock proofOfUsage;
+    ProofOfUsageMock proofOfUsage;
 
-  function beforeEach() public {
-    proofOfUsage = new ProofOfUsageMock();
-  }
+    function beforeEach() public {
+        proofOfUsage = new ProofOfUsageMock();
+    }
 
-  function testProofOfUsageContract() public{
-    proofOfUsage.testProofOfUsage();
+    function testProofOfUsageContract() public {
+        proofOfUsage.testProofOfUsage();
 
-    Assert.equal(proofOfUsage.sender(), address(this), 'Sender should be correct');
-    //Assert.equal(receiver.funct(), data, 'Data should be correct');
-  }
-
+        Assert.equal(proofOfUsage.sender(), address(this), 'Sender should be correct');
+        //Assert.equal(receiver.funct(), data, 'Data should be correct');
+    }
 }

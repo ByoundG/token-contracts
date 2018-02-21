@@ -72,4 +72,7 @@ typings/
 # solidity coverage Output
 coverage.json
 
+#visual cdode
+.vscode
+
 xclip

@@ -4,7 +4,6 @@ This is an example contract that helps test the functionality of the approveAndC
 This one assumes successful receival of approval.
 */
 contract HumanStandardReceivingContract {
-
         event ReceivedApproval(uint256 _value);
 
         /// @dev Human Standard  function that will handle incoming token transfers.
@@ -13,5 +12,4 @@ contract HumanStandardReceivingContract {
         /// @param _tokenContract Token address.
         /// @param _extraData  Transaction metadata.
         function receiveApproval(address _from, uint256 _value, address _tokenContract, bytes _extraData) public;
-
 }
