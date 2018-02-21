@@ -9,7 +9,12 @@ import './ERC223ReceivingContract.sol';
 /**
  * @title ERC223 standard token implementation.
  */
-contract ERC223BasicToken is ERC223Basic, BasicToken {      
+contract ERC223BasicToken is ERC223Basic, BasicToken {
+    function() public {
+        //if ether is sent to this address, send it back.
+        revert();
+    }
+    
     /**
      * @dev Transfer the specified amount of tokens to the specified address.
      *      Invokes the `tokenFallback` function if the recipient is a contract.

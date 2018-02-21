@@ -2,40 +2,40 @@ pragma solidity 0.4.18;
 
 import "zeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
 import "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
-
 import '../token/ERC223BasicToken.sol';
+import "../utils/EnforceProtocol.sol";
 
 
-/// @title EnforceProtocolToken that uses MintableToken, DetailedERC20, ERC223BasicToken.
-contract EnforceProtocolToken is DetailedERC20, MintableToken, ERC223BasicToken {
+/// @title EnforceProtocolToken that uses MintableToken, DetailedERC20, ERC223BasicToken, EnforceProtocol
+contract ExampleEnforceProtocolToken is DetailedERC20, MintableToken, ERC223BasicToken, EnforceProtocol {
     string constant NAME = "Enforce Protocol Token";
     string constant SYMBOL = "EPT";
     uint8 constant DECIMALS = 18;
     address public protocolAddress;
     
     /// @dev Constructor that sets the details of the ERC20 token.
-    function EnforceProtocolToken(address _protocolAddress)
+    function ExampleEnforceProtocolToken(address _protocolAddress)
+        EnforceProtocol(_protocolAddress)
         DetailedERC20(NAME, SYMBOL, DECIMALS)
         public
     {
         protocolAddress = _protocolAddress;
     }
 
-    modifier toProtocol(address _to) {
-        require(_to == protocolAddress);
-        _;
-    }
-
-    function setProtocolAddress(address _newProtocolAddress)
+    /**
+     * @dev transfer token for a protocol address
+     * @param _to The address to transfer to.
+     * @param _value The amount to be transferred.
+     * @param _data payload to be send with the transfer.
+     */
+    function transfer(address _to, uint256 _value, bytes _data)
         public
-        onlyOwner 
+        toProtocol(_to)
+        returns (bool)
     {
-        require(_newProtocolAddress != address(0));
-        protocolAddress = _newProtocolAddress;
-        NewProtocolAddress();
+        require(super.transfer(_to, _value, _data));
+        return true;
     }
-
-    event NewProtocolAddress();
 
     /**
      * @dev transfer token for a protocol address
@@ -47,7 +47,7 @@ contract EnforceProtocolToken is DetailedERC20, MintableToken, ERC223BasicToken 
         toProtocol(_to)
         returns (bool)
     {
-        require(super.transfer(_to,_value));
+        require(super.transfer(_to, _value));
         return true;
     }
 

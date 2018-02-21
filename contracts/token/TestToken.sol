@@ -1,11 +1,11 @@
 pragma solidity 0.4.18;
 
 import "zeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
-import "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
+import "../utils/UnlimitedMintableToken.sol";
 import './ERC223BasicToken.sol';
 
-/// @title TestToken that uses MintableToken, DetailedERC20, ERC223BasicToken.
-contract TestToken is DetailedERC20, MintableToken, ERC223BasicToken {
+/// @title TestToken that uses UnlimitedMintableToken, DetailedERC20, ERC223BasicToken.
+contract TestToken is DetailedERC20, UnlimitedMintableToken, ERC223BasicToken {
     string constant NAME = "Test";
     string constant SYMBOL = "T";
     uint8 constant DECIMALS = 18;

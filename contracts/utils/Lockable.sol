@@ -7,13 +7,13 @@ import "zeppelin-solidity/contracts/ownership/Ownable.sol";
  * @dev Base contract which allows children to implement a lock mechanism.
  */
 contract Lockable is Ownable {
-    event UnLock();
-
     bool public locked = true;
 
+    event UnLock();
+
     /**
-    * @dev Modifier to make a function callable only when the contract is not locked.
-    */
+     * @dev Modifier to make a function callable only when the contract is not locked.
+     */
     modifier whenNotLocked() {
         require(!locked);
         _;
