@@ -1,6 +1,6 @@
-pragma solidity 0.4.18;
+pragma solidity 0.4.19;
 
-import '../../contracts/token/ERC223ReceivingContract.sol';
+import "../ERC223ReceivingContract.sol";
 
  /*
  * Contract that is working with ERC223 tokens

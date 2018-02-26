@@ -1,17 +1,17 @@
-pragma solidity 0.4.18;
+pragma solidity 0.4.19;
 
 import "truffle/Assert.sol";
-import "../contracts/example/ExampleToken.sol";
-import "./mocks/ERC223ReceivingContractMock.sol";
+import "../contracts/mocks/ERC223BasicTokenMock.sol";
+import "../contracts/mocks/ERC223ReceivingContractMock.sol";
+
 
 contract TestERC223ReceivingContract {
-    ExampleToken token;
+    ERC223BasicTokenMock token;
     ERC223ReceivingContractMock receiver;
 
     function beforeEach() public {
-        token = new ExampleToken();
+        token = new ERC223BasicTokenMock(this, 100);
         receiver = new ERC223ReceivingContractMock();
-        token.mint(address(this), 100);
     }
 
     function testTransferToERC223TokenContract() public {

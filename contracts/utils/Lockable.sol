@@ -1,4 +1,4 @@
-pragma solidity 0.4.18;
+pragma solidity 0.4.19;
 
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 
@@ -9,7 +9,7 @@ import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 contract Lockable is Ownable {
     bool public locked = true;
 
-    event UnLock();
+    event LogUnlocked();
 
     /**
      * @dev Modifier to make a function callable only when the contract is not locked.
@@ -22,8 +22,8 @@ contract Lockable is Ownable {
     /**
     * @dev called by the owner to release, returns to normal state
     */
-    function release() public onlyOwner {
+    function unlock() public onlyOwner {
         locked = false;
-        UnLock();
+        LogUnlocked();
     }
 }
