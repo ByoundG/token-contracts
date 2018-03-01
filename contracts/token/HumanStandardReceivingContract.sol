@@ -1,4 +1,4 @@
-pragma solidity 0.4.18;
+pragma solidity 0.4.19;
 /*
 This is an example contract that helps test the functionality of the approveAndCall() functionality of HumanStandardToken.sol.
 This one assumes successful receival of approval.

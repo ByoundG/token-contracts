@@ -1,6 +1,6 @@
 {
   "name": "@tokenfoundry/token-contracts",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "Code for the new token foundry token using zeppeling ERC20 implementation.",
   "repository": "https://github.com/tokenfoundry/token-contracts.git",
   "license": "MIT",
