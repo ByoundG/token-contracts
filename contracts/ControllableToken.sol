@@ -1,9 +1,9 @@
 pragma solidity 0.4.19;
 
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
-import "zeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
+import "zeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 
-import "./utils/TokenControllerI.sol";
+import "./TokenControllerI.sol";
 
 
 /**
@@ -11,7 +11,7 @@ import "./utils/TokenControllerI.sol";
  *
  * @dev Token that queries a token controller contract to check if a transfer is allowed.
  */
-contract ControllableToken is Ownable, MintableToken {
+contract ControllableToken is Ownable, StandardToken {
     TokenControllerI public controller;
 
     modifier isAllowed(address _from, address _to) {
