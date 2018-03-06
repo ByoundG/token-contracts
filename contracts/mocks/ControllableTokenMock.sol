@@ -5,9 +5,9 @@ import "../ControllableToken.sol";
 
 contract ControllableTokenMock is ControllableToken {
 
-  function ControllableTokenMock(address initialAccount, uint256 initialBalance) public {
-    balances[initialAccount] = initialBalance;
-    totalSupply_ = initialBalance;
-  }
+    function ControllableTokenMock(address initialAccount, uint256 initialBalance) public {
+        balances[initialAccount] = initialBalance;
+        totalSupply_ = initialBalance;
+    }
 
 }
