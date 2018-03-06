@@ -17,6 +17,6 @@ contract SaleTokenController is TokenControllerI {
     /// @dev Specifies if a transfer is allowed or not.
     /// @return True if the transfer is allowed
     function transferAllowed(address _from, address _to) external view returns (bool) {
-    
+        return _from == saleAddress;
     }
 }
