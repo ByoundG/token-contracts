@@ -5,6 +5,7 @@
   "repository": "https://github.com/tokenfoundry/token-contracts.git",
   "license": "MIT",
   "scripts": {
+    "test": "truffle test",
     "lint": "eslint .",
     "coverage": "solidity-coverage",
     "generate-wallet": "node ./scripts/generateWallet.js",
