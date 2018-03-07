@@ -1,6 +1,6 @@
 {
   "name": "@tokenfoundry/token-contracts",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Code for tokens contracts to be used by token foundry projects",
   "repository": "https://github.com/tokenfoundry/token-contracts.git",
   "license": "MIT",
