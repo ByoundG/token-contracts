@@ -20,12 +20,13 @@ contract ControllableToken is Ownable, StandardToken {
         _;
     }
 
-    function setController(address _controller) onlyOwner public {
-        require(_controller != 0);
-        controller = controller;
+    function setController(TokenControllerI _controller) onlyOwner public {
+        require(_controller != address(0));
+        controller = _controller;
     }
 
     function transfer(address _to, uint256 _value) isAllowed(msg.sender, _to) public returns (bool) {
+        
         return super.transfer(_to, _value);
     }
 
