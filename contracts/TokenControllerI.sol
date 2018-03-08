@@ -2,7 +2,7 @@ pragma solidity 0.4.19;
 
 
 /// @title Interface for token controllers. The controller specifies if a transfer can be done.
-interface TokenControllerI {
+contract TokenControllerI {
 
     /// @dev Specifies if a transfer is allowed or not.
     /// @return True if the transfer is allowed
