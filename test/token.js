@@ -31,14 +31,15 @@ contract('Token', (accounts) => {
   });
 
   it('should not be possible to call non-allowed functions', async () => {
-    await expectThrow(token.sendTransaction({ from: owner, value: 10 }));
+    await expectThrow(token.sendTransaction({ from: owner, value: 10 }));  //test fallback function
     await expectThrow(token.transferOwnership(randomGuy ,{ from: randomGuy }));
     await expectThrow(token.setController(0));
     await expectThrow(token.setController(controller.address, { from: randomGuy }));
   });
 
   it('should be owned by owner', async () => {
-      await expectThrow(token.sendTransaction({ from: owner, value: 10 }));
+      const tokenOwner = await token.owner.call();
+      assert.equal(tokenOwner,owner);
   });
 
   it('should start with the correct initial amount', async () => {
