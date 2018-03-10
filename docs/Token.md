@@ -14,4 +14,4 @@
   - inherited from ERC20Basic contract
 
 ## Dependencies
-![Token inheritance diagram](diagrams/token.png)
+![Token inheritance diagram](/diagrams/token.png)
