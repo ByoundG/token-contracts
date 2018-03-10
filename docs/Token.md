@@ -13,5 +13,5 @@
 ### Transfer(*address* indexed `owner`, *address* indexed `spender`, *uint256* `value`)
   - inherited from ERC20Basic contract
 
-## Dependencies
+## Token inheritance diagram
 ![Token inheritance diagram](/diagrams/token.png)
