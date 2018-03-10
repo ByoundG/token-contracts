@@ -26,6 +26,22 @@ contract('Token', (accounts) => {
     await token.setController(controller.address);
   });
 
+  it('should fail if initial token supply is 0', async () => {
+    await expectThrow(Token.new(0));
+  });
+
+  it('should not be possible to call non-allowed functions', async () => {
+    await expectThrow(token.sendTransaction({ from: owner, value: 10 }));  //test fallback function
+    await expectThrow(token.transferOwnership(randomGuy ,{ from: randomGuy }));
+    await expectThrow(token.setController(0));
+    await expectThrow(token.setController(controller.address, { from: randomGuy }));
+  });
+
+  it('should be owned by owner', async () => {
+      const tokenOwner = await token.owner.call();
+      assert.equal(tokenOwner,owner);
+  });
+
   it('should start with the correct initial amount', async () => {
     const amount = await token.totalSupply.call();
     const owned = await token.balanceOf.call(owner);
