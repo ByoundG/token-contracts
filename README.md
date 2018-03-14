@@ -1,6 +1,6 @@
 # token-contracts
 
-Code for the new token foundry implementation using open zepppeling ERC20 implementation.
+Code for the token contracts that will be used for Token Foundry projects.
 
 ## Instructions
 
