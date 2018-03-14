@@ -1,4 +1,6 @@
 # token-contracts
+[![CircleCI](https://circleci.com/gh/tokenfoundry/token-contracts.svg?style=shield)](https://circleci.com/gh/tokenfoundry/token-contracts)
+[![Coverage Status](https://coveralls.io/repos/github/tokenfoundry/token-contracts/badge.svg?branch=master)](https://coveralls.io/github/tokenfoundry/token-contracts?branch=master)
 
 Code for the token contracts that will be used for Token Foundry projects.
 
@@ -8,15 +10,15 @@ In order to build and test the contracts found in this repo, [Truffle](trufflefr
 
 ### Building
 
-Once the repo is cloned, run `npm install` to install all the dependencies.
+Once the repo is cloned, run `yarn install` to install all the dependencies.
 
-Running `truffle compile` will compile the contract code and place the output in the `build/contracts` directory.
+Running `yarn compile` will compile the contract code and place the output in the `build/contracts` directory.
 
 ### Testing
 
-`truffle test` to run all the tests.
+`yarn test` to run all the tests.
 
-`npm run coverage` to run tests and get code coverage.
+`yarn coverage` to run tests and get code coverage.
 
 ## License
 
