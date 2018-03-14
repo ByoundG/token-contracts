@@ -1,14 +1,15 @@
 # ControllableToken
 
-### ControllableToken contract - It queries a token controller contract to check if a transfer is allowed 
+### ControllableToken contract - an ownable, standard token, that queries a token controller to check whether a transfer is allowed 
 
 - This contract does **not** have a fallback function.
+- This contract does **not** have a constructor.
+
 
 ## ControllableToken Functions
 
 ### setController(*TokenControllerI* `_controller`) onlyOwner public
-
-Set the `controller` contract. `controller` must have implemented `transferAllowed` function. This function would have a client specific business rules of token transfer. 
+Set the `controller` that is to be used to control transfers of this token. The `controller` must have implemented the `transferAllowed` function which defines client specific business rules of token transfer. 
 
 #### Inputs
 
@@ -18,16 +19,15 @@ Set the `controller` contract. `controller` must have implemented `transferAllow
 
 
 ### transfer(*address* `_to`, *uint256* `_value`) isAllowed(`msg.sender`, `_to`) public returns (bool)
-
-Calls *BasicToken* `transfer` function to transfer token for a specified address. `_value` must be less or equal of `msg.sender` token balance. `isAllowed` modifier executes *controler* `transferAllowed` function to check if `msg.sender` can transfer token to `_to`. Returns success.
+Calls *BasicToken*'s `transfer` function to transfer token for a specified address. The `isAllowed` modifier executes the *controller* `transferAllowed` function to check whether `msg.sender` is permitted to transfer tokens to `_to`. Further, `_value` must be less than or equal to `msg.sender`'s token balance.
 
 #### Inputs
 
 | type      | name     | description      |
 | --------- | -------- | ---------------- |
-| *address* | `_to` | Address to where tokens are sent |
+| *address* | `_to` | Address where tokens are requested to be sent |
 | *uint256* | `_value` | Number of tokens to transfer |
 
-### transferFrom(*address* `_from`, *address* `_to`, *uint256* `_value`) isAllowed(`_from`, `_to`) public returns (bool)
 
-Calls *StandardToken* `transferFrom` function to transfer token from one address to another. `_value` must be less or equal of `from` balance of tokens and less or equal of the amount that was previously allowed to `msg.sender` transfer between `_from` and `_to`. And `isAllowed` modifier executes *controler* `transferAllowed` function to check if `_from` can transfer token to `_to`. Returns success.Returns success.
+### transferFrom(*address* `_from`, *address* `_to`, *uint256* `_value`) isAllowed(`_from`, `_to`) public returns (bool)
+Calls *StandardToken*'s `transferFrom` function to transfer tokens from one address to another. `_value` must be less than or equal to `from`'s balance of tokens. The `isAllowed` modifier again executes *controller*'s `transferAllowed` function to check if `_from` can transfer tokens to `_to`.
