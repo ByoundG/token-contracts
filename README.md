@@ -1,4 +1,6 @@
 # token-contracts
+[![CircleCI](https://circleci.com/gh/tokenfoundry/token-contracts.svg?style=shield)](https://circleci.com/gh/tokenfoundry/token-contracts)
+[![Coverage Status](https://coveralls.io/repos/github/tokenfoundry/token-contracts/badge.svg?branch=master)](https://coveralls.io/github/tokenfoundry/token-contracts?branch=master)
 
 Code for the token contracts that will be used for Token Foundry projects.
 
