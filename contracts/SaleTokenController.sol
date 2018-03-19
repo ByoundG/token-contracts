@@ -17,7 +17,7 @@ contract SaleTokenController is TokenControllerI {
     /// @dev (overwrites method in TokenControllerI).
     /// @return True if the transfer is allowed
     function transferAllowed(address _from, address _to) external view returns (bool) {
-        return (!sale.hasContributed[_from] || recipientAllowed(_to) || hasUsedProtocol(_from));
+        return (!sale.hasContributed(_from) || recipientAllowed(_to) || hasUsedProtocol(_from));
     }
 
     ///@dev Specifies whether a sale contibutor has contributed to the team's protocol
