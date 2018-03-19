@@ -1,7 +1,7 @@
 pragma solidity 0.4.19;
 
 import "@tokenfoundry/sale-contracts/contracts/Sale.sol";
-import "./TokenControllerI.sol";
+//import "./TokenControllerI.sol";
 
 /// @title Abstract contract for sale token controllers.
 /// The controller specifies whether a transfer can be done.
