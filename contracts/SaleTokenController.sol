@@ -22,10 +22,10 @@ contract SaleTokenController is TokenControllerI {
 
     ///@dev Specifies whether a sale contibutor has contributed to the team's protocol
     ///@return True if they have ( they can now transfer their token )
-    function hasUsedProtocol(address contributor) internal view returns (bool);
+    function hasUsedProtocol(address _contributor) internal view returns (bool);
 
     ///@dev Specifies whether a recipient of a transfer is allowed
     ///@dev this allows the possibility of allowing transfers to the team's protocol
-    function recipientAllowed(address recipient) internal view returns (bool);
+    function recipientAllowed(address _recipient) internal view returns (bool);
 
 }
