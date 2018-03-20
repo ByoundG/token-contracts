@@ -58,4 +58,4 @@ Checks whether the named recipient should be allowed to receive a token at the c
 
 | type     | description                |
 | -------- | -------------------------- |
-| *bool* | True if the address has used the protocol |
+| *bool* | True if the recipient is allowed to receive a token transfer |
