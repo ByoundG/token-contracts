@@ -18,9 +18,12 @@ contract ControllableToken is Ownable, StandardToken {
 
     /// @dev Executes transferAllowed() function from the Controller. 
     modifier isAllowed(address _from, address _to) {
-        require(controller != address(0));
         require(controller.transferAllowed(_from, _to));
         _;
+    }
+
+    function ControllableToken() public {
+        controller = TokenControllerI(msg.sender);
     }
 
     /// @dev Sets the controller that is going to be used by isAllowed modifier
