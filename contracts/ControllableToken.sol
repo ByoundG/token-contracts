@@ -22,10 +22,6 @@ contract ControllableToken is Ownable, StandardToken {
         _;
     }
 
-    function ControllableToken() public {
-        controller = TokenControllerI(msg.sender);
-    }
-
     /// @dev Sets the controller that is going to be used by isAllowed modifier
     function setController(TokenControllerI _controller) onlyOwner public {
         require(_controller != address(0));
