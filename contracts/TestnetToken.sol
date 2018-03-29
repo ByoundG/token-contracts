@@ -13,6 +13,7 @@ contract TestnetToken is StandardToken {
         amountToGenerate = _amountToGenerate;
     }
     
+    /// @dev Called by anyone to get `amountToGenerate` tokens. It can only be called once by each address.
     function generateTokens() external {
         require(!hasGeneratedTokens[msg.sender]);
 
