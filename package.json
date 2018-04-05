@@ -1,7 +1,7 @@
 {
   "name": "@tokenfoundry/token-contracts",
-  "version": "0.2.11",
-  "description": "Code for tokens contracts to be used by token foundry projects",
+  "version": "0.3.0",
+  "description": "Code for token contracts to be used by token foundry projects",
   "repository": "https://github.com/tokenfoundry/token-contracts.git",
   "license": "MIT",
   "scripts": {
@@ -12,12 +12,8 @@
     "get-private-key": "node ./scripts/getPrivateKey.js",
     "test": "truffle test"
   },
-  "directories": {
-    "test": "test"
-  },
   "dependencies": {
     "coveralls": "^3.0.0",
-    "truffle": "4.1.3",
     "zeppelin-solidity": "1.7.0"
   },
   "devDependencies": {
@@ -40,6 +36,7 @@
     "ethers": "^2.2.3",
     "inquirer": "^5.0.0",
     "solidity-coverage": "^0.4.7",
+    "truffle": "4.1.3",
     "truffle-hdwallet-provider": "0.0.3",
     "web3-provider-engine": "^13.5.0"
   },
