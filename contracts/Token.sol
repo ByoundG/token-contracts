@@ -11,13 +11,13 @@ import "./ControllableToken.sol";
 contract Token is ControllableToken {
 
 	/**
-	* @dev Transfer is an event iherited from ERC20Basic.sol interface (OpenZeppelin).
+	* @dev Transfer is an event inherited from ERC20Basic.sol interface (OpenZeppelin).
 	* @param _supply Total supply of tokens.
 	*/
     function Token(uint256 _supply) public {
         require(_supply != 0);
         totalSupply_ = _supply;
         balances[msg.sender] = _supply;
-        Transfer(address(0), this, _supply);
+        Transfer(address(0), msg.sender, _supply);
     }
 }

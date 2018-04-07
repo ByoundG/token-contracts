@@ -71,26 +71,6 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@tokenfoundry/sale-contracts@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@tokenfoundry/sale-contracts/-/sale-contracts-1.0.6.tgz#be80be69992358eec5c9f206191a19512c4dff6c"
-  dependencies:
-    "@tokenfoundry/state-machine" "0.2.4"
-    "@tokenfoundry/token-contracts" "0.2.5"
-    zeppelin-solidity "1.7.0"
-
-"@tokenfoundry/state-machine@0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@tokenfoundry/state-machine/-/state-machine-0.2.4.tgz#b581e4a7d1e928036e3b57c02faef0f9a912034e"
-
-"@tokenfoundry/token-contracts@0.2.5":
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/@tokenfoundry/token-contracts/-/token-contracts-0.2.5.tgz#24d783ae5247734633d2ab3b11b302a7e64b35f4"
-  dependencies:
-    coveralls "^3.0.0"
-    truffle "4.1.3"
-    zeppelin-solidity "1.7.0"
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
