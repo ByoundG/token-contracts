@@ -18,7 +18,7 @@ contract('Token', (accounts) => {
 
   beforeEach(async() => {
     initialAmount = new web3.BigNumber(1000);
-    token = await Token.new(initialAmount);
+    token = await Token.new(initialAmount, 'Token', 'TKN', 18);
     controller = await TokenControllerMock.new();
     await controller.setAllowed(owner);
     await controller.setAllowed(allowed);
@@ -27,7 +27,7 @@ contract('Token', (accounts) => {
   });
 
   it('should fail if initial token supply is 0', async () => {
-    await expectThrow(Token.new(0));
+    await expectThrow(Token.new(0, 'Token', 'TKN', 18));
   });
 
   it('should not be possible to call non-allowed functions', async () => {
