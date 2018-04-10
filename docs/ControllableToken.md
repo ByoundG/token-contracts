@@ -1,7 +1,8 @@
 # ControllableToken
 
 ### ControllableToken contract - an ownable, standard token, that queries a token controller to check whether a transfer is allowed 
-
+ 
+- ControllableToken contract is Ownable, StandardToken, ERC20, BasicToken and ERC20 which are OpenZeppelin contracts. More info about those contracts is available at [OpenZeppelin documentation page](https://openzeppelin.org/api/docs/open-zeppelin.html) and contracts' source code is [here](https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/token/ERC20)
 - This contract does **not** have a fallback function.
 - This contract does **not** have a constructor.
 
@@ -31,3 +32,6 @@ Calls *BasicToken*'s `transfer` function to transfer token for a specified addre
 
 ### transferFrom(*address* `_from`, *address* `_to`, *uint256* `_value`) isAllowed(`_from`, `_to`) public returns (bool)
 Calls *StandardToken*'s `transferFrom` function to transfer tokens from one address to another. `_value` must be less than or equal to `from`'s balance of tokens. The `isAllowed` modifier again executes *controller*'s `transferAllowed` function to check if `_from` can transfer tokens to `_to`.
+
+## ControllableToken inheritance diagram
+![ControllableToken inheritance diagram](/diagrams/tokenController.png)
