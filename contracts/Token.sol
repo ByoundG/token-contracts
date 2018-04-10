@@ -16,8 +16,8 @@ contract Token is ControllableToken, DetailedERC20 {
 	* @dev Transfer is an event inherited from ERC20Basic.sol interface (OpenZeppelin).
 	* @param _supply Total supply of tokens.
     * @param _name Is the long name by which the token contract should be known
-    * @param _symbol Capital letters representing the token. Example: CVL, VPK.
-    * @param _decimals Token decimals and should be between 0 and 18.
+    * @param _symbol The set of capital letters used to represent the token e.g. DTH.
+    * @param _decimals The number of decimal places the tokens can be split up into. This should be between 0 and 18.
 	*/
     function Token(
         uint256 _supply,
