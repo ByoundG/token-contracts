@@ -32,3 +32,6 @@ Calls *BasicToken*'s `transfer` function to transfer token for a specified addre
 
 ### transferFrom(*address* `_from`, *address* `_to`, *uint256* `_value`) isAllowed(`_from`, `_to`) public returns (bool)
 Calls *StandardToken*'s `transferFrom` function to transfer tokens from one address to another. `_value` must be less than or equal to `from`'s balance of tokens. The `isAllowed` modifier again executes *controller*'s `transferAllowed` function to check if `_from` can transfer tokens to `_to`.
+
+## ControllableToken inheritance diagram
+![ControllableToken inheritance diagram](/diagrams/tokenController.png)
