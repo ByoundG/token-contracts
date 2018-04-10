@@ -1,7 +1,8 @@
 # ControllableToken
 
 ### ControllableToken contract - an ownable, standard token, that queries a token controller to check whether a transfer is allowed 
-
+ 
+- ControllableToken contract is Ownable, StandardToken, ERC20, BasicToken and ERC20 which are an OpenZeppelin contract. More info about those contracts is available in [OpenZeppelin documentation page](https://openzeppelin.org/api/docs/open-zeppelin.html) and contracts source code is [here](https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/token/ERC20)
 - This contract does **not** have a fallback function.
 - This contract does **not** have a constructor.
 
