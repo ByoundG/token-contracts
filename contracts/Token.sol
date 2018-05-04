@@ -1,6 +1,6 @@
-pragma solidity 0.4.19;
+pragma solidity 0.4.23;
 
-import "zeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
 import "./ControllableToken.sol";
 
 
@@ -19,7 +19,7 @@ contract Token is ControllableToken, DetailedERC20 {
     * @param _symbol The set of capital letters used to represent the token e.g. DTH.
     * @param _decimals The number of decimal places the tokens can be split up into. This should be between 0 and 18.
 	*/
-    function Token(
+    constructor(
         uint256 _supply,
         string _name,
         string _symbol,
@@ -28,6 +28,6 @@ contract Token is ControllableToken, DetailedERC20 {
         require(_supply != 0);
         totalSupply_ = _supply;
         balances[msg.sender] = _supply;
-        Transfer(address(0), msg.sender, _supply);  //event
+        emit Transfer(address(0), msg.sender, _supply);  //event
     }
 }

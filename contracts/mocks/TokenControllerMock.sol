@@ -1,4 +1,4 @@
-pragma solidity 0.4.19;
+pragma solidity 0.4.23;
 
 import "../TokenControllerI.sol";
 
@@ -6,7 +6,7 @@ import "../TokenControllerI.sol";
 contract TokenControllerMock is TokenControllerI {
     mapping(address => bool) allowed;
     
-    function TokenControllerMock() public {
+    constructor() public {
     
     } 
 
