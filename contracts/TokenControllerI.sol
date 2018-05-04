@@ -1,4 +1,4 @@
-pragma solidity 0.4.19;
+pragma solidity 0.4.23;
 
 
 /// @title Interface for token controllers. The controller specifies whether a transfer can be done.
