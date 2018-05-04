@@ -4,7 +4,7 @@ module.exports = {
   // testCommand: 'mocha --timeout 5000',
   // norpc: true,
   // dir: './secretDirectory',
-  copyPackages: ['zeppelin-solidity', '@tokenfoundry'],
+  copyPackages: ['openzeppelin-solidity'],
   skipFiles: [
     'mocks'
   ]
